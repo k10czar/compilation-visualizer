@@ -59,3 +59,29 @@ _Future Work: there's ways to still find the right package._
 [@NeedleTools](https://twitter.com/NeedleTools) • 
 [@marcel_wiessler](https://twitter.com/marcel_wiessler) • 
 [@hybridherbst](https://twitter.com/hybdridherbst)
+
+## How To remove the submodule
+
+1.  Delete from the  _.gitmodules_  file:
+
+	`[submodule "Assets/Plugins/CompilationVisualizer"]`
+	
+	`path = Assets/Plugins/CompilationVisualizer`
+	
+	`url = https://github.com/k10czar/compilation-visualizer.git`
+	
+2.  Delete from  _.git/config_:
+
+	`[submodule "Assets/Plugins/CompilationVisualizer"]`
+	
+	`url = https://github.com/k10czar/compilation-visualizer.git`
+	
+	`active = true`
+	
+3.  Run:
+
+	`git rm --cached "Assets/Plugins/CompilationVisualizer"`
+
+4.  Commit the superproject.
+
+5.  Delete the submodule folder _`Assets/Plugins/CompilationVisualizer`_.
