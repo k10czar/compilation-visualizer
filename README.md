@@ -1,12 +1,12 @@
 # Compilation Visualizer for Unity
 
+![Unity Version Compatibility](https://img.shields.io/badge/Unity-2018.4%20%E2%80%94%202020.2-brightgreen) [![openupm](https://img.shields.io/npm/v/com.needle.compilation-visualizer?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.needle.compilation-visualizer/)
+
 ## Original Authors
 <b>[needle — tools for unity](https://needle.tools)</b> • 
 [@NeedleTools](https://twitter.com/NeedleTools) • 
 [@marcel_wiessler](https://twitter.com/marcel_wiessler) • 
 [@hybridherbst](https://twitter.com/hybdridherbst)
-
-![Unity Version Compatibility](https://img.shields.io/badge/Unity-2018.4%20%E2%80%94%202020.2-brightgreen) [![openupm](https://img.shields.io/npm/v/com.needle.compilation-visualizer?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.needle.compilation-visualizer/)
 
 ## What's this?
 This tool visualizes the assembly compilation process in Unity3D. It hooks into the Editor-provided events and nicely draws them on a timeline. That's especially helpful when trying to optimize compile times and dependencies between assemblies.  
@@ -15,13 +15,39 @@ Besides showing a graphical view of compilation, selecting an assembly shows bot
 
 The screenshots show full compilations; but the timeline works as well for partial compilations (e.g. you changed a single script and Unity only recompiles the relevant parts of the dependency chain).
 
-## Installation
+## Installation with submodues
 
 ### Add as submodule on your Unity project repository
 
 ``git submodule add https://github.com/k10czar/compilation-visualizer.git "Assets/Plugins/CompilationVisualizer"``
 
-## Quick Start
+### How To remove
+
+1.  Delete from the  _.gitmodules_  file:
+
+	`[submodule "Assets/Plugins/CompilationVisualizer"]`
+	
+	`path = Assets/Plugins/CompilationVisualizer`
+	
+	`url = https://github.com/k10czar/compilation-visualizer.git`
+	
+2.  Delete from  _.git/config_:
+
+	`[submodule "Assets/Plugins/CompilationVisualizer"]`
+	
+	`url = https://github.com/k10czar/compilation-visualizer.git`
+	
+	`active = true`
+	
+3.  Run:
+
+	`git rm --cached "Assets/Plugins/CompilationVisualizer"`
+
+4.  Commit the superproject.
+
+5.  Delete the submodule folder _`Assets/Plugins/CompilationVisualizer`_.
+
+## Installation with OpenUPM
 
 Compilation Visualizer is available on OpenUPM: https://openupm.com/packages/com.needle.compilation-visualizer/  
 
@@ -59,29 +85,3 @@ While most functionality works great those versions, some minor things are diffe
 - slightly less accurate total compilation time on 2018.4 — 2019.1+ has events for the entire compilation while on 2018.4 the last finished assembly compilation is used as end date.
 - no PackageInfo for now on 2018.4/2019.1 as `PackageInfo.FindForAsset` doesn't exist.  
 _Future Work: there's ways to still find the right package._
-
-## How To remove the submodule
-
-1.  Delete from the  _.gitmodules_  file:
-
-	`[submodule "Assets/Plugins/CompilationVisualizer"]`
-	
-	`path = Assets/Plugins/CompilationVisualizer`
-	
-	`url = https://github.com/k10czar/compilation-visualizer.git`
-	
-2.  Delete from  _.git/config_:
-
-	`[submodule "Assets/Plugins/CompilationVisualizer"]`
-	
-	`url = https://github.com/k10czar/compilation-visualizer.git`
-	
-	`active = true`
-	
-3.  Run:
-
-	`git rm --cached "Assets/Plugins/CompilationVisualizer"`
-
-4.  Commit the superproject.
-
-5.  Delete the submodule folder _`Assets/Plugins/CompilationVisualizer`_.
