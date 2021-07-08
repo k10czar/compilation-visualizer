@@ -1,5 +1,11 @@
 # Compilation Visualizer for Unity
 
+## Original Authors
+<b>[needle — tools for unity](https://needle.tools)</b> • 
+[@NeedleTools](https://twitter.com/NeedleTools) • 
+[@marcel_wiessler](https://twitter.com/marcel_wiessler) • 
+[@hybridherbst](https://twitter.com/hybdridherbst)
+
 ![Unity Version Compatibility](https://img.shields.io/badge/Unity-2018.4%20%E2%80%94%202020.2-brightgreen) [![openupm](https://img.shields.io/npm/v/com.needle.compilation-visualizer?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.needle.compilation-visualizer/)
 
 ## What's this?
@@ -53,12 +59,6 @@ While most functionality works great those versions, some minor things are diffe
 - slightly less accurate total compilation time on 2018.4 — 2019.1+ has events for the entire compilation while on 2018.4 the last finished assembly compilation is used as end date.
 - no PackageInfo for now on 2018.4/2019.1 as `PackageInfo.FindForAsset` doesn't exist.  
 _Future Work: there's ways to still find the right package._
-
-## Contact
-<b>[needle — tools for unity](https://needle.tools)</b> • 
-[@NeedleTools](https://twitter.com/NeedleTools) • 
-[@marcel_wiessler](https://twitter.com/marcel_wiessler) • 
-[@hybridherbst](https://twitter.com/hybdridherbst)
 
 ## How To remove the submodule
 
