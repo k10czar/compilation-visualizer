@@ -9,6 +9,12 @@ Besides showing a graphical view of compilation, selecting an assembly shows bot
 
 The screenshots show full compilations; but the timeline works as well for partial compilations (e.g. you changed a single script and Unity only recompiles the relevant parts of the dependency chain).
 
+## Installation
+
+### Add as submodule on your Unity project repository
+
+``git submodule add https://github.com/k10czar/compilation-visualizer.git "Assets/Plugins/CompilationVisualizer"``
+
 ## Quick Start
 
 Compilation Visualizer is available on OpenUPM: https://openupm.com/packages/com.needle.compilation-visualizer/  
